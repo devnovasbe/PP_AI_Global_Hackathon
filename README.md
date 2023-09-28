@@ -17,7 +17,7 @@ So, there are 4 parts:
 
 Main components:
 
- - Custom connectors to communicate with our webservice and Walmart API
+ - One zip folder that contains 2 Custom connectors that are linked together to communicate with Walmart API.
  - Power Automate flow to leverage the developed webservice and Walmart API through custom connectors
  - Canvas app
  - AI model already trained
@@ -81,6 +81,7 @@ This sample illustrates the following concepts:
 * Need to create two valid connections for the custom connector.
 * First leverage Walmart API: https://www.walmart.io/docs/affiliate/
 * Next, create a web app on Java according to the API script instructions: https://www.walmart.io/docs/affiliate/onboarding-guide. This Generated signature script will supply a signature key that is required to use on one of the API headers. Note: We suggest you to host the Java project on Azure to later use as input on the Walmart custom connector that contains the actions to Search product items and also to post on a Walmart cart all the selected porducts.
+* Import the custom connector zip folder to leverage first the GetSignature custom connector that should follow the steps we mentioned before, and then use in a Power Automate Cloud Flow on a step that is previous to use the Walmart I/O Custom connector due to the fact that you will need the GetSignature output.
   
 ```
 
